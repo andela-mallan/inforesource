@@ -2,11 +2,8 @@ from phonebook import Phonebook
 import pytest
 
 @pytest.fixture
-def phonebook(request):
-    phonebook = Phonebook()
-    def clearup_phonebook():
-        phonebook.cleanUp()
-    request.addfinalizer(clearup_phonebook)
+def phonebook(tmpdir):
+    phonebook = Phonebook(tmpdir)
     return phonebook
 
 def test_add_and_lookup_entry(phonebook):
