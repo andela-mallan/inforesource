@@ -1,1 +1,3 @@
-run python3 -m pytest to run all the test cases in a project
+run
+  -  `python3 -m pytest` to run all the test cases in a project
+  -  `python3 -m pytest --fixtures` to get diff args to work with in fixtures
