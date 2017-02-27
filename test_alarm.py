@@ -1,5 +1,7 @@
 import unittest
 from alarm import Alarm
+from unittest.mock import Mock
+from sensor import Sensor
 
 class AlarmTest(unittest.TestCase):
 
@@ -22,13 +24,24 @@ class AlarmTest(unittest.TestCase):
         self.alarm.check()
         self.assertFalse(self.alarm.is_alarm_on)
 
+    def test_pressure_is_ok_with_mock_fw(self):
+        """
+        Using the mock framework to create stubs
+        """
+        test_sensor = Mock(Sensor)
+        test_sensor.sample_pressure.return_value = 18
+        self.alarm = Alarm(test_sensor)
+        self.alarm.check()
+        self.assertFalse(self.alarm.is_alarm_on)
+
 class TestSensor:
     """
     This class is an example of a test stub. A stub is any test double
-    with simple implementation and has no logic. You use it when the class
-    you want to test has a collaborator that is inconvenient to use in the
-    test and it helps you control the exact value the collaborating object
-    returns. In this case the Sensor class is the collaborator.
+    with same interface as the class it replaces, with simple implementation
+    and has no logic. You use it when the class you want to test has a
+    collaborator that is inconvenient to use in the test and it helps you
+    control the exact value the collaborating object returns. In this case
+    the Sensor class is the collaborator.
     """
     def __init__(self, pressure):
         self.pressure = pressure
