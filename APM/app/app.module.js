@@ -11,6 +11,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var product_list_component_1 = require("./products/product-list.component");
+var product_filter_pipe_1 = require("./products/product-filter.pipe");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -21,7 +22,8 @@ AppModule = __decorate([
         imports: [platform_browser_1.BrowserModule,
             forms_1.FormsModule],
         declarations: [app_component_1.AppComponent,
-            product_list_component_1.ProductListComponent],
+            product_list_component_1.ProductListComponent,
+            product_filter_pipe_1.ProductFilterPipe],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
