@@ -11,6 +11,7 @@
     <div class="col-md-12">
       <h1 class="post-title"> Learning Laravel </h1>
       <p> This blog post will get you started with learning Laravel </p>
+      <a href="{{ route('blog.post', ['id' => 1]) }}"> Read more </a>
     </div>
   </div>
 
@@ -18,6 +19,7 @@
     <div class="col-md-12">
       <h1 class="post-title"> Laravel 5.3 </h1>
       <p> Announcing the minor release of Laravel 5.3 </p>
+      <a href="{{ route('blog.post', ['id' => 2]) }}"> Read more </a>
     </div>
   </div>
 @endsection
