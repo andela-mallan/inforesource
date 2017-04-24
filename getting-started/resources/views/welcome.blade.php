@@ -2,21 +2,22 @@
 
 @section('content')
   <div class="row">
-    <div class="col-md-6">
-      <h1> Control Structures </h1>
-      @if(true)
-        <p>Displays if true</p>
-      @else
-        <p>Displays if false</p>
-      @endif
+    <div class="col-md-12">
+      <p class="quote"> Laravel </p>
+    </div>
+  </div>
 
-      @for($i=1; $i<5; $i++)
-        <p>{{ $i }} iteration</p>
-      @endfor
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="post-title"> Learning Laravel </h1>
+      <p> This blog post will get you started with learning Laravel </p>
+    </div>
+  </div>
 
-      <h1> XSS </h1>
-      {{ "<script>alert('Hello!');</script>" }}
-      {!! "<script>alert('Hello!');</script>" !!}
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="post-title"> Laravel 5.3 </h1>
+      <p> Announcing the minor release of Laravel 5.3 </p>
     </div>
   </div>
 @endsection
