@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+  @include('partials.errors')
   <div class="row">
     <div class="col-md-12">
       <p class="quote">  Edit Blog Post </p>
@@ -10,6 +11,7 @@
   <div class="row">
     <div class="col-md-12">
       <form action="{{ route('admin.create') }}" method="post">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <div class="form-group">
           <label for="title"> Title </label>
           <input type="text" id="title" name="title" class="form-control" />
