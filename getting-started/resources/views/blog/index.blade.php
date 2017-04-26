@@ -7,19 +7,14 @@
     </div>
   </div>
 
+  @foreach($posts as $post)
   <div class="row">
     <div class="col-md-12">
-      <h1 class="post-title"> Learning Laravel </h1>
-      <p> This blog post will get you started with learning Laravel </p>
-      <a href="{{ route('blog.post', ['id' => 1]) }}"> Read more </a>
+      <h1 class="post-title"> {{ $post['title'] }} </h1>
+      <p> {{ $post['content'] }} </p>
+      <a href="{{ route('blog.post', ['id' => array_search($post, $posts)]) }}"> Read more </a>
     </div>
   </div>
+  @endforeach
 
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="post-title"> Laravel 5.3 </h1>
-      <p> Announcing the minor release of Laravel 5.3 </p>
-      <a href="{{ route('blog.post', ['id' => 2]) }}"> Read more </a>
-    </div>
-  </div>
 @endsection

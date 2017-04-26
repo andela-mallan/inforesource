@@ -14,12 +14,13 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         <div class="form-group">
           <label for="title"> Title </label>
-          <input type="text" id="title" name="title" class="form-control" />
+          <input type="text" id="title" name="title" class="form-control" value="{{ $post['title'] }}"/>
         </div>
         <div class="form-group">
           <label for="content"> Content </label>
-          <textarea id="content" name="content" class="form-control"></textarea>
+          <textarea id="content" name="content" class="form-control"> {{ $post['content'] }}</textarea>
         </div>
+        <input type="hidden" name="id" value="$post_id" />
         <button type="submit" class="btn btn-primary"> Submit </button>
       </form>
     </div>
