@@ -1,2 +1,2 @@
 # inforesource
-repo with info from different pluralsight courses
+repo with info from different resources.
