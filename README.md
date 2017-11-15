@@ -1,2 +1,2 @@
 # inforesource
-repo with info from different resources.
+reference resources
